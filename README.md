@@ -6,7 +6,7 @@ Ege Çam
 
 ---
 
-![RASAT — final render still](images/rasat-render.png)
+![RASAT — final render still](rasat-render.png)
 
 ## Concept
 
@@ -18,7 +18,7 @@ The Marmara fault operates on its own terms. It does not care that a city was bu
 
 The source is the earthquake catalogue published by the Kandilli Observatory and Earthquake Research Institute (Boğaziçi University, Istanbul).
 
-![Kandilli catalogue query interface](images/kandilli-query.png)
+![Kandilli catalogue query interface](kandilli-query.png)
 
 Two queries were used:
 
@@ -29,7 +29,7 @@ Total: 1055 events spanning 118 years. The earliest entry is a magnitude 4.7 eve
 
 The geographic window is a rectangle that contains the active strands of the North Anatolian Fault closest to Istanbul: 40.3° to 41.2° latitude, 26.5° to 30.2° longitude. The window covers Istanbul, Kocaeli, Yalova, the Marmara Sea, and the coast of Tekirdağ.
 
-![Marmara geographic window](images/marmara-window.png)
+![Marmara geographic window](marmara-window.png)
 
 For each event the catalogue provides: date, time, latitude, longitude, depth in kilometres, and magnitude (xM, the merged magnitude value). All five are used by the work.
 
@@ -42,7 +42,7 @@ The data is parsed in Python and reduced to a single CSV. Each row becomes a ver
 - Magnitude controls both the form's height and its thickness, on a logarithmic scale that follows the actual energy release of seismic events.
 - Depth controls the speed at which the form rises into view. Deeper events emerge more slowly.
 
-![TouchDesigner network](images/td-network.png)
+![TouchDesigner network](td-network.png)
 
 The geometry is generated each frame by a Script SOP that reads the dataset, applies the mappings above, and produces the forms. A reveal parameter controls which events have already entered the scene; this parameter advances over time, causing the structure to assemble itself from the floor upward in chronological order. The full assembly covers 118 years of seismic record.
 
